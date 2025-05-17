@@ -52,8 +52,7 @@ void processChoice(CourseList &courseList)
 				case 2:
 				{
 					cout << "\nOption 2:Add course is selected.\n";
-					cout << "\nPlease contact the Curriculum "
-							"Committee to start the process of adding a course.\n\n";
+					addCourse(courseList);
 					displayMenu();
 					break;
 				}
@@ -170,6 +169,37 @@ void search(CourseList &courseList)
 			}
 		}
 	}
+}
+
+void addCourse(CourseList &courseList)
+{
+	int number, units, prereqCount;
+	string name;
+
+	cout << "\nEnter the course number: ";
+	cin >> number;
+
+	cout << "\nEnter the course name: ";
+	cin.ignore();
+	getline(cin, name);
+
+	cout << "Enter the name of units: ";
+	cin >> units;
+
+	cout << "Enter the number of prerequisites: ";
+	cin >> prereqCount;
+
+	set<int> prereqs;
+	for (int i = 0; i < prereqCount; ++i)
+	{
+		int prereqNum;
+		cout << "Enter the prerequisite #" << (i + 1) << ": ";
+		cin >> prereqNum;
+		prereqs.insert(prereqNum);
+	}
+
+	courseList.addCourse(number, name, units, prereqs);
+	cout << "\nCourse added successfully";
 }
 
 void deleteProcess(CourseList &courseList)

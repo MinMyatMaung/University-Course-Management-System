@@ -4,6 +4,7 @@
 #include "CourseList.h"
 
 void displayMenu();
-void processChoice(CourseList& courseList);
+void processChoice(CourseList &courseList);
+void addCourse(CourseList &courseList);
 
 #endif
