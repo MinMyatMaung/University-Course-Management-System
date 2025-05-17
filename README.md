@@ -1,42 +1,41 @@
-# 📚 University Course Management system
+# 🎓 University Course Management System
 
-A C++ console application that simulates a college course management system. The program allows users to search, view, and manage a list of computer science courses, including viewing prerequisites and calculating total prerequisite units.
-
----
-
-## Features
-
-- 🔍 **Search Courses** by course number.
-- ➕ **Add Courses** (currently not implemented, placeholder message shown).
-- ❌ **Delete Courses** from the catalog.
-- 📋 **Display All Courses** in sorted order.
-- 📊 **Calculate Total Prerequisite Units** for any given course.
-- 🔁 **Menu-driven loop** for repeated operations.
-- 🧠 Built using a custom linked list structure (`CourseList`) with deep copy support (The Big Three).
+A C++ console application for managing a university's computer science course catalog. This menu-driven program allows users to search for courses, view prerequisites, calculate total units, and manage a dynamic list of courses using a linked list data structure.
 
 ---
 
-## 🗂️ File Structure
+## 📌 Features
 
-| File                                | Description                                                         |
-| ----------------------------------- | ------------------------------------------------------------------- |
-| `Main.cpp`                          | Program entry point, manages user flow.                             |
-| `Interface.h / Interface.cpp`       | UI menu and input handling.                                         |
-| `Course.h / Course.cpp`             | `Course` class with number, name, units, and prerequisites.         |
-| `CourseList.h / CourseList.cpp`     | Linked list of courses with core functionality.                     |
-| `CourseListBigThree.cpp`            | Copy constructor, assignment operator, destructor for `CourseList`. |
-| `CourseListInsertInOrder.cpp`       | Maintains ordered insertion of courses.                             |
-| `TestingCases.h / TestingCases.cpp` | Populates course list with test data.                               |
-| `makefile` _(optional)_             | For compiling using `make` on Unix-like systems.                    |
-| `.vcxproj / .filters` files         | Visual Studio project files.                                        |
+- 🔍 **Search Course** – Look up course details by course number.
+- ➕ **Add Course** – Add a new course to the catalog (course number, name, units, prerequisites).
+- ❌ **Delete Course** – Remove an existing course by number.
+- 📋 **Display All Courses** – Print all available courses in sorted order.
+- 📊 **Total Prerequisite Units** – Calculate total units required by a course’s prerequisites.
+- 🔁 Menu repeats until user chooses to exit.
 
 ---
 
-## 🛠️ Compilation & Running
+## 🧱 File Structure
 
-### 🧵Using g++ (Linux/Mac/WSL)
+| File                                | Purpose                                                          |
+| ----------------------------------- | ---------------------------------------------------------------- |
+| `Main.cpp`                          | Program entry point. Sets up the course list and menu loop.      |
+| `Interface.h / Interface.cpp`       | Displays menu and handles user interactions.                     |
+| `Course.h / Course.cpp`             | Defines the `Course` class (number, name, units, prerequisites). |
+| `CourseList.h / CourseList.cpp`     | Defines a singly linked list of `Course` nodes.                  |
+| `CourseListBigThree.cpp`            | Implements copy constructor, assignment operator, destructor.    |
+| `CourseListInsertInOrder.cpp`       | Handles inserting courses in sorted order.                       |
+| `TestingCases.h / TestingCases.cpp` | Provides initial set of hardcoded test courses.                  |
+| `makefile` (optional)               | Simplifies compilation using `make`.                             |
+| `.vcxproj / .filters` (optional)    | Visual Studio configuration files.                               |
+
+---
+
+## ⚙️ Compilation & Execution
+
+### ✅ Using `g++` on Terminal (macOS/Linux/WSL)
 
 ```bash
-g++ *.cpp -o Main
-./Main
+g++ Main.cpp Interface.cpp Course.cpp CourseList.cpp CourseListBigThree.cpp CourseListInsertInOrder.cpp TestingCases.cpp -o CourseManager
+./CourseManager
 ```
