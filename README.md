@@ -1,21 +1,21 @@
-# 🎓 University Course Management System
+# University Course Management System
 
 A C++ console application for managing a university's computer science course catalog. This menu-driven program allows users to search for courses, view prerequisites, calculate total units, and manage a dynamic list of courses using a linked list data structure.
 
 ---
 
-## 📌 Features
+## Features
 
-- 🔍 **Search Course** – Look up course details by course number.
-- ➕ **Add Course** – Add a new course to the catalog (course number, name, units, prerequisites).
-- ❌ **Delete Course** – Remove an existing course by number.
-- 📋 **Display All Courses** – Print all available courses in sorted order.
-- 📊 **Total Prerequisite Units** – Calculate total units required by a course’s prerequisites.
-- 🔁 Menu repeats until user chooses to exit.
+- **Search Course** – Look up course details by course number.
+- **Add Course** – Add a new course to the catalog (course number, name, units, prerequisites).
+- **Delete Course** – Remove an existing course by number.
+- **Display All Courses** – Print all available courses in sorted order.
+- **Total Prerequisite Units** – Calculate total units required by a course’s prerequisites.
+- Menu repeats until user chooses to exit.
 
 ---
 
-## 🧱 File Structure
+## File Structure
 
 | File                                | Purpose                                                          |
 | ----------------------------------- | ---------------------------------------------------------------- |
@@ -31,9 +31,9 @@ A C++ console application for managing a university's computer science course ca
 
 ---
 
-## ⚙️ Compilation & Execution
+## Compilation & Execution
 
-### ✅ Using `g++` on Terminal (macOS/Linux/WSL)
+### Using `g++` on Terminal (macOS/Linux/WSL)
 
 ```bash
 g++ Main.cpp Interface.cpp Course.cpp CourseList.cpp CourseListBigThree.cpp CourseListInsertInOrder.cpp TestingCases.cpp -o CourseManager
