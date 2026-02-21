@@ -26,8 +26,6 @@ A C++ console application for managing a university's computer science course ca
 | `CourseListBigThree.cpp`            | Implements copy constructor, assignment operator, destructor.    |
 | `CourseListInsertInOrder.cpp`       | Handles inserting courses in sorted order.                       |
 | `TestingCases.h / TestingCases.cpp` | Provides initial set of hardcoded test courses.                  |
-| `makefile` (optional)               | Simplifies compilation using `make`.                             |
-| `.vcxproj / .filters` (optional)    | Visual Studio configuration files.                               |
 
 ---
 
